@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Agenda Personal</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <h1>
-        LA mejor wed del mundo XD
-    </h1>
+    <!-- LOGIN / REGISTRO -->
+    <section class="login-container glass" id="login">
+        <h1>🔐 Mi Agenda Personal</h1>
+
+        <input type="text" id="usuario" placeholder="Usuario">
+
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button type="button" id="togglePassword" class="toggle-btn">👁️</button>
+        </div>
+
+        <div class="botones">
+            <button onclick="registrar()">Registrar</button>
+            <button onclick="iniciar()">Iniciar sesión</button>
+        </div>
+
+        <p id="mensaje"></p>
+    </section>
+
+
+    <!-- AGENDA -->
+    <section class="agenda-container glass hidden" id="agenda">
+        <h1>📘 Bienvenido</h1>
+        <h3 id="bienvenida"></h3>
+
+        <div class="form-tarea">
+            <input type="text" id="tarea" placeholder="Escribe una tarea...">
+            <input type="date" id="fecha">
+            <button onclick="agregarTarea()">Agregar</button>
+        </div>
+
+        <div id="listaTareas" class="lista"></div>
+
+        <button onclick="cerrarSesion()" class="logout">Cerrar sesión</button>
+    </section>
+
+    <!-- Firebase SDK v8 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- Script principal -->
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
