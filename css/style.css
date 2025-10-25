@@ -1,3 +1,219 @@
-body{
-    color: aquamarine;
+/* 🎨 Estilo Glass Moderno - Mi Agenda Personal */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --color-accent: #ffc107;
+    --color-bg: #0a0a0a;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text-light: #f2f2f2;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-light);
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 30%, #1c1b1b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+h3 {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid var(--color-accent);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+button {
+    background: var(--color-accent);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    margin: 0.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffda60;
+    transform: scale(1.03);
+}
+
+.logout {
+    margin-top: 1rem;
+    background: #f44336;
+    color: white;
+}
+
+#mensaje {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+.form-tarea {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lista {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.tarea button {
+    background: transparent;
+    color: #ff6b6b;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: 0.3s;
+}
+
+.tarea.hecha {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.tarea input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 10px;
+    accent-color: var(--color-accent);
+}
+
+body {
+    background: linear-gradient(120deg, #1a1a1a, #333);
+    background-size: 400% 400%;
+    animation: fondoColores 15s ease infinite;
+    transition: background 1s ease;
+}
+
+@keyframes fondoColores {
+    0% {
+        background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    }
+
+    16% {
+        background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);
+    }
+
+    33% {
+        background: linear-gradient(120deg, #134e5e, #71b280);
+    }
+
+    50% {
+        background: linear-gradient(120deg, #ff512f, #dd2476);
+    }
+
+    66% {
+        background: linear-gradient(120deg, #4568dc, #b06ab3);
+    }
+
+    83% {
+        background: linear-gradient(120deg, #43cea2, #185a9d);
+    }
+
+    100% {
+        background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    }
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
 }
