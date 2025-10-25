@@ -35,7 +35,7 @@ Los datos se almacenan de forma segura en **Firebase**, garantizando persistenci
 ---
 
 ## ⚙️ Estructura del proyecto
-´´´
+```
 📂 Mi-Agenda-Personal/
 ├── 📁 css/
 │ └── style.css
@@ -43,7 +43,7 @@ Los datos se almacenan de forma segura en **Firebase**, garantizando persistenci
 │ └── main.js
 ├── 📄 index.html
 └── 📄 README.md
-´´´
+```
 
 ---
 
